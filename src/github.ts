@@ -188,6 +188,7 @@ export const upload = async (
       authorization: `token ${config.github_token}`,
     },
     data: body,
+    timeout: 20 * 60 * 1000,
   });
   const json = resp.data;
   if (resp.status !== 201) {
